@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vivo, Jan Jeremiah Jose M.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="revised" content="19-09-24">
+    <link rel="icon" href="Logo.png" type="image/gif">
+    <title>The Father of Modern Physics</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top right, #f0f4f8, #d9e2ec, #bcccdc);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 40px 20px; /* Increased padding for a spacious feel */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: 4px solid #ffdd57;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            animation: fadeInDown 1s ease-out;
+            position: relative; /* Allow for absolute positioning of decorative elements */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1); /* Subtle overlay for depth */
+            border-radius: 20px;
+            z-index: 0; /* Place behind the header content */
+        }
+
+        h1 {
+            font-size: 3em; /* Increased font size for emphasis */
+            margin: 0;
+            position: relative; /* Allow for positioning above the background */
+            z-index: 1; /* Bring the text above the overlay */
+        }
+
+        h2 {
+            font-size: 2.5em; /* Increased size for subheader */
+            margin-top: 20px;
+            color: #ffdd57; /* Accent color for distinction */
+            z-index: 1;
+            position: relative;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin-bottom: 20px; /* Space below the paragraph */
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.5s; /* Delay for paragraph */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 20px 20px;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, background-color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: #ffdd57;
+            color: #2c3e50;
+            transform: translateY(-5px);
+            border-bottom: 3px solid #fff;
+        }
+
+        /* Section */
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 5px solid transparent;
+            background-clip: padding-box;
+            text-align: center; /* Center text and images */
+            opacity: 0;
+            animation: slideInContent 2s forwards 1s;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 80%; /* Adjust size for better layout */
+            height: auto; /* Keep aspect ratio */
+            border-radius: 15px;
+            margin: 0 auto 30px; /* Center image */
+            display: block; /* Make image block to center it */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .bibliography {
+            margin-top: 20px;
+            text-align: left; /* Align bibliography entries to the left */
+        }
+
+        .entry {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .entry:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            border-top: 5px solid #ffdd57;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        footer nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s;
+        }
+
+        footer nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInContent {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Isaac Newton</h1>
+        <p>A tribute to his remarkable contributions to science</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="bibliography.html">Bibliography</a>
+        <a href="inventions.html">Inventions</a>
+        <a href="quotes.html">Quotes</a>
+        <a href="laws.html">Laws</a>
+    </nav>
+
+    <section>
+        <h2>Bibliography of Isaac Newton</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOzrWCFvuouWkildKtehqfmFzMWYZhyW6aOqwjt8UjsmagYCPj0vDWPhp5&s=10" alt="Portrait of Isaac Newton">
+        <p>Isaac Newton (1642-1727) was an English mathematician, physicist, astronomer, and author who is widely recognized as one of the most influential scientists of all time. His work laid the foundation for classical mechanics, and his laws of motion and universal gravitation are cornerstones in the field of physics.</p>
+
+        <div class="bibliography">
+            <div class="entry">
+                <h3>1. "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy, 1687)</h3>
+                <p>This groundbreaking work formulates the laws of motion and universal gravitation, presenting a mathematical framework for understanding the physical universe. It is considered one of the most important works in the history of science.</p>
+            </div>
+            <div class="entry">
+                <h3>2. "Opticks" (1704)</h3>
+                <p>In this work, Newton explores the nature of light and color, proposing theories on the spectrum and conducting experiments that laid the groundwork for the field of optics.</p>
+            </div>
+            <div class="entry">
+                <h3>3. "The Method of Fluxions" (1736)</h3>
+                <p>This posthumously published work details Newton's method of calculus, which he referred to as the "method of fluxions." It further established his contribution to mathematics.</p>
+            </div>
+            <div class="entry">
+                <h3>4. "The Chronology of Ancient Kingdoms Amended" (1728)</h3>
+                <p>In this historical work, Newton attempts to establish a timeline of ancient civilizations, blending historical and biblical chronology with scientific inquiry.</p>
+            </div>
+            <div class="entry">
+                <h3>5. "Opticks: or, A Treatise of the Reflections, Refractions, Inflections and Colours of Light" (1704)</h3>
+                <p>This is another significant publication where Newton investigates the behavior of light and color. His experiments led to the conclusion that white light is composed of a spectrum of colors.</p>
+            </div>
+            <div class="entry">
+                <h3>6. "Observations upon the Prophecies of Daniel and the Apocalypse of St. John" (1733)</h3>
+                <p>In this theological work, Newton examines biblical prophecies, demonstrating his interest in both science and religion.</p>
+            </div>
+            <div class="entry">
+                <h3>7. "Principles of Philosophy" (1687)</h3>
+                <p>Newton discusses his philosophical approach to science and mathematics, emphasizing the importance of empirical evidence and observation in understanding natural phenomena.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Isaac Newton Legacy. All rights reserved.</p>
+            <p>Explore the life and achievements of one of the greatest scientists in history.</p>
+            <p>Learn more about:</p>
+            <nav>
+                <a href="https://www.britannica.com/biography/Isaac-Newton">Isaac Newton at Britannica</a> |
+                <a href="https://www.history.com/topics/science/isaac-newton">Isaac Newton at History.com</a> |
+                <a href="https://www.nobelprize.org/prizes/physics/1903/summary/">Nobel Prize Information</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

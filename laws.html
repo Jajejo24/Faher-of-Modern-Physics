@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vivo, Jan Jeremiah Jose M.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="revised" content="19-09-24">
+    <link rel="icon" href="Logo.png" type="image/gif">
+    <title>The Father of Modern Physics - Laws of Isaac Newton</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top right, #f0f4f8, #d9e2ec);
+            color: #333;
+            scroll-behavior: smooth;
+            animation: fadeIn 2s ease-in;
+        }
+
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: 4px solid #ffdd57;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 20px 20px;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffdd57;
+            color: #2c3e50;
+            transform: translateY(-5px);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            opacity: 0;
+            animation: slideInContent 2s forwards 1s;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #34495e;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.5s;
+        }
+
+			.formula{
+				text-weight: bold;
+			}
+
+        img {
+            max-width: 80%; /* Adjust size for better layout */
+            height: auto; /* Keep aspect ratio */
+            border-radius: 15px;
+            margin: 0 auto 30px; /* Center image */
+            display: block; /* Make image block to center it */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            border-top: 5px solid #ffdd57;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        }
+
+        footer p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        footer nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s;
+        }
+
+        footer nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInContent {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Laws of Isaac Newton</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="bibliography.html">Bibliography</a>
+        <a href="inventions.html">Inventions</a>
+        <a href="quotes.html">Quotes</a>
+        <a href="laws.html">Laws</a>
+    </nav>
+
+    <section>
+        <h1>Newton's Laws of Motion</h1>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs93odhvoJ6mnEwSysWYe8IJUXgOxVczTITw&usqp=CAU" alt="Newton's First Law of Motion">
+        
+        <h2>First Law: Law of Inertia</h2>
+        <p>Newton's First Law states that an object at rest will remain at rest, and an object in motion will continue in motion with the same speed and in the same direction unless acted upon by a net external force.</p>
+
+        <h2>Second Law: Law of Acceleration</h2>
+        <p>Newton's Second Law quantifies the relationship between force, mass, and acceleration. It states that the acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass.</p>
+        <div class="formula">F = m × a</div>
+        <p>Where:</p>
+        <ul>
+            <li><strong>F</strong> = net force (in Newtons)</li>
+            <li><strong>m</strong> = mass (in kilograms)</li>
+            <li><strong>a</strong> = acceleration (in meters per second squared)</li>
+        </ul>
+
+        <h2>Third Law: Action and Reaction</h2>
+       
+        <p>Newton's Third Law states that for every action, there is an equal and opposite reaction. This means that if object A exerts a force on object B, then object B exerts a force of equal magnitude and opposite direction on object A.</p>
+        <div class="formula">F<sub>AB</sub> = -F<sub>BA</sub></div>
+        <p>Where:</p>
+        <ul>
+            <li><strong>F<sub>AB</sub></strong> = force exerted by A on B</li>
+            <li><strong>F<sub>BA</sub></strong> = force exerted by B on A</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Isaac Newton Legacy. All rights reserved.</p>
+            <p>Explore the life and achievements of one of the greatest scientists in history.</p>
+            <p>Learn more about:</p>
+            <nav>
+                <a href="https://www.britannica.com/biography/Isaac-Newton">Isaac Newton at Britannica</a> |
+                <a href="https://www.history.com/topics/science/isaac-newton">Isaac Newton at History.com</a> |
+                <a href="https://www.nobelprize.org/prizes/physics/1903/summary/">Nobel Prize Information</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
